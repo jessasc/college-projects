@@ -1,0 +1,23 @@
+.card {
+  // margin-bottom: 3rem;
+  h2,
+  h3,
+  h4 {
+    // font-family: $font-secondary;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+}
+
+.card--md {
+  img {
+    @include imgFit(100%, 34rem);
+  }
+}
+
+.card--sm {
+  margin-bottom: 2rem;
+  img {
+    @include imgFit(20rem, 15rem);
+  }
+}

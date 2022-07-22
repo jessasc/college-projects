@@ -1,0 +1,35 @@
+.featurednews {
+  padding-bottom: 7rem;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .card {
+    padding: 1rem;
+    li:first-child {
+      font-size: 1.2rem;
+      color: $clr-gray;
+      opacity: 0.5;
+    }
+    a {
+      color: $clr-accent;
+    }
+  }
+
+  .card--sm {
+    img {
+      margin-right: 1rem;
+      @include imgFit(15rem, 15rem);
+    }
+  }
+
+  .card--big {
+    img {
+      @include imgFit(100%, 30rem);
+    }
+  }
+}

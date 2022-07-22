@@ -1,0 +1,62 @@
+.updates {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__author {
+    list-style-type: none;
+    font-size: 1.4rem;
+    li {
+      display: inline-block;
+      padding-right: 2rem;
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+  .categories,
+  .recent,
+  .tags {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+  }
+  table {
+    width: 100%;
+  }
+  .recent__details {
+    display: flex;
+    margin-bottom: 20px;
+    strong {
+      font-weight: bold;
+    }
+    img {
+      margin-right: 2rem;
+      width: 150px;
+    }
+  }
+  .tags {
+    span {
+      margin-bottom: 10px;
+    }
+    .btn__inverted {
+      border: 1px solid #333;
+      border-radius: 5rem;
+      padding: 20px 30px;
+      color: #333;
+      background: #fff;
+      display: inline-block;
+      transition: all 0.5s;
+    }
+
+    .btn__inverted:hover {
+      color: #fff;
+      background: #333;
+    }
+  }
+}

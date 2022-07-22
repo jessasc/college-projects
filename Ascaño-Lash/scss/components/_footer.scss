@@ -1,0 +1,23 @@
+.footer {
+  &__wrapper {
+    @include mediaQuery($break-md) {
+      @include grid(1, 1rem);
+    }
+  }
+  &__content {
+    @include mediaQuery($break-md) {
+      order: 2;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  &__img {
+    img {
+      @include mediaQuery($break-md) {
+        @include center2;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

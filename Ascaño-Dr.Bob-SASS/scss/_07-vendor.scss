@@ -1,0 +1,19 @@
+.tns-outer {
+  & > button {
+    display: none;
+  }
+}
+
+.tns-nav {
+  text-align: center;
+  button {
+    margin: 0 0.5rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    border: none;
+  }
+  .tns-nav-active {
+    background-color: $clr-accent;
+  }
+}

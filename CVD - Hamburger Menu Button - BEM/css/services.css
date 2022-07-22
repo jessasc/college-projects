@@ -1,0 +1,165 @@
+#webdesign {
+  padding-top: 15rem;
+}
+
+#webdesign .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+#webdesign .container .first-half .first-half-webdesign__title {
+  color: #ffa700;
+  font-weight: bolder;
+  font-size: 6rem;
+  /* margin: 4rem 0; */
+  margin-bottom: 3rem;
+}
+
+/*Liliit ang font size ng title kapag nareach ang 640px na screen*/
+@media (max-width: 640px) {
+  #webdesign .container .first-half .first-half-webdesign__title {
+    font-size: 3rem;
+  }
+}
+
+/*Hinati yung first and second half into 50%*/
+#webdesign .container .first-half,
+#webdesign .container .second-half {
+  width: 50%;
+}
+
+/*Ang maxwidth nya ay 991px, if 990 pababa yung width ay magiging 100%*/
+@media (max-width: 991px) {
+  #webdesign .container .first-half,
+  #webdesign .container .second-half {
+    width: 100%;
+  }
+
+  /*yung picture mawawala kapag naging 991px ang screen*/
+  #webdesign .container .second-half {
+    display: none;
+  }
+}
+
+/*PRICEEEEEEEEEEEEE*/
+
+#webdesign .container .first-half .price {
+  color: #ffa700;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#webdesign .container .first-half .price-text {
+  font-size: smaller;
+  font-style: italic;
+}
+
+/*GRAPHICSSSSS*/
+#graphics .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+#graphics .container .second-half .first-half-graphics__title {
+  color: #ffa700;
+  font-weight: bolder;
+  font-size: 6rem;
+  /* margin: 4rem 0; */
+  margin-bottom: 3rem;
+}
+
+/*Liliit ang font size ng title kapag nareach ang 640px na screen*/
+@media (max-width: 640px) {
+  #graphics .container .second-half .first-half-graphics__title {
+    font-size: 3rem;
+  }
+}
+
+/*Hinati yung first and second half into 50%*/
+#graphics .container .first-half,
+#graphics .container .second-half {
+  width: 50%;
+}
+
+/*Ang maxwidth nya ay 991px, if 990 pababa yung width ay magiging 100%*/
+@media (max-width: 991px) {
+  #graphics .container .first-half,
+  #graphics .container .second-half {
+    width: 100%;
+  }
+
+  /*yung picture mawawala kapag naging 991px ang screen*/
+  #graphics .container .first-half {
+    display: none;
+  }
+}
+
+/*PRICEEEEEEEEEEEEE*/
+
+#graphics .container .second-half .price {
+  color: #ffa700;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#graphics .container .second-half .price-text {
+  font-size: smaller;
+  font-style: italic;
+}
+
+#socmed .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+#socmed .container .first-half .first-half-socmed__title {
+  color: #ffa700;
+  font-weight: bolder;
+  font-size: 6rem;
+  /* margin: 4rem 0; */
+  margin-bottom: 3rem;
+}
+
+/*Liliit ang font size ng title kapag nareach ang 640px na screen*/
+@media (max-width: 640px) {
+  #socmed .container .first-half .first-half-socmed__title {
+    font-size: 3rem;
+  }
+}
+
+/*Hinati yung first and second half into 50%*/
+#socmed .container .first-half,
+#socmed .container .second-half {
+  width: 50%;
+}
+
+/*Ang maxwidth nya ay 991px, if 990 pababa yung width ay magiging 100%*/
+@media (max-width: 991px) {
+  #socmed .container .first-half,
+  #socmed .container .second-half {
+    width: 100%;
+  }
+
+  /*yung picture mawawala kapag naging 991px ang screen*/
+  #socmed .container .second-half {
+    display: none;
+  }
+}
+
+/*PRICEEEEEEEEEEEEE*/
+#socmed .container .first-half .price {
+  color: #ffa700;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#socmed .container .first-half .price-text {
+  font-size: smaller;
+  font-style: italic;
+}

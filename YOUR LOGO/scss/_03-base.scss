@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Poppins:wght@400;700;900&display=swap");
+// BASE
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins";
+  line-height: 1.4;
+  color: $clr-dark;
+  overflow: auto;
+}
+
+// .block__small {
+//   text-transform: uppercase;
+//   letter-spacing: 10px;
+//   display: flex;
+//   flex-direction: row;
+//   &::before {
+//     content: "";
+//     flex: 1 1;
+//     border-bottom: 1px solid;
+//     width: 4rem;
+//     margin: auto;
+//     margin-left: 10px;
+//   }
+// }
+
+.block__small {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  &:before {
+    content: "\00a0\00a0\00a0\00a0";
+    text-decoration: line-through;
+  }
+}
+
+.block__title {
+  text-transform: capitalize;
+}
+
+p {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,65 @@
+@for $i from 1 through 6 {
+  .mb--#{$i} {
+    margin-bottom: $i + rem;
+  }
+}
+
+$sizes: 15, 20, 25, 30, 35;
+@each $size in $sizes {
+  .p--#{$size} {
+    padding: $size + px;
+  }
+}
+
+$display: flex, grid, block, inline-block, inline;
+@each $display in $display {
+  .d--#{$display} {
+    display: $display;
+  }
+}
+
+$colors: (
+  "medyoGreen": hsl(120, 18%, 38%),
+  "madilimGreen": hsl(120, 18%, 28%),
+  "maliwanagGreen": hsl(120, 18%, 58%),
+  "superdilimGreen": hsl(120, 18%, 8%),
+);
+
+@each $key, $val in $colors {
+  .bg {
+    &--#{$key} {
+      background-color: $val;
+    }
+  }
+}
+
+$justify: (
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+  "between": space-between,
+  "around": space-around,
+);
+
+@each $key, $val in $justify {
+  .j {
+    &--#{$key} {
+      justify-content: $val;
+    }
+  }
+}
+
+$alignment: center, left, right, justify;
+// @each $alignment in $alignment {
+//   .a--#{$alignment} {
+//     $alignment: $alignment;
+//   }
+// }
+
+@each $key, $val in $justify {
+  .a {
+    &--#{$key} {
+      text-align: $val;
+    }
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+  </head>
+  <body>
+    <header class="header py--1">
+      <div class="container">
+        <div class="header__wrapper d--flex align--center justify--between">
+          <div class="header__brand d--flex align--center">
+            <figure class="branding">
+              <img src="./images/logo.jpg" />
+            </figure>
+          </div>
+
+          <div class="header__actions align--center">
+            <ul class="mobile__actions d--flex align--center text--dark">
+              <li><a href="">Contact</a></li>
+              <li><a href="">Properties</a></li>
+              <li><a href="">About</a></li>
+            </ul>
+          </div>
+
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="popular py--5">
+      <div class="container">
+        <div class="block__header mb--3">
+          <p class="block__small">Popular</p>
+          <h2 class="block__title">Our Best Houses</h2>
+        </div>
+        <div class="popular__wrapper">
+          <div class="card">
+            <img src="./img/banner.jpg" alt="" />
+
+            <div class="card__content">
+              <ul class="house d--flex align--center mb--2">
+                <li><i class="fa-solid fa-location-dot"></i></li>
+                <li>Bulaho Island</li>
+              </ul>
+
+              <ul class="part d--flex align--center justify--between mb--2">
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-bed"></i>
+                  <p>4 beds</p>
+                </li>
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-shower"></i>
+                  <p>2 showers</p>
+                </li>
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-house"></i>
+                  <p>75 x 80 sqm</p>
+                </li>
+              </ul>
+
+              <ul class="price d--flex align--center justify--between">
+                <li><a href="" class="btn bg--accent">Call Agent</a></li>
+                <li>PHP 1,450,000.00</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/p1.jpg" alt="" />
+
+            <div class="card__content">
+              <ul class="house d--flex align--center mb--2">
+                <li><i class="fa-solid fa-location-dot"></i></li>
+                <li>Bulaho Island</li>
+              </ul>
+
+              <ul class="part d--flex align--center justify--between mb--2">
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-bed"></i>
+                  <p>4 beds</p>
+                </li>
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-shower"></i>
+                  <p>2 showers</p>
+                </li>
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-house"></i>
+                  <p>75 x 80 sqm</p>
+                </li>
+              </ul>
+
+              <ul class="price d--flex align--center justify--between">
+                <li><a href="" class="btn bg--accent">Call Agent</a></li>
+                <li>PHP 1,450,000.00</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./images/p1.jpg" alt="" />
+
+            <div class="card__content">
+              <ul class="house d--flex align--center mb--2">
+                <li><i class="fa-solid fa-location-dot"></i></li>
+                <li>Bulaho Island</li>
+              </ul>
+
+              <ul class="part d--flex align--center justify--between mb--2">
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-bed"></i>
+                  <p>4 beds</p>
+                </li>
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-shower"></i>
+                  <p>2 showers</p>
+                </li>
+                <li class="d--flex align--center">
+                  <i class="fa-solid fa-house"></i>
+                  <p>75 x 80 sqm</p>
+                </li>
+              </ul>
+
+              <ul class="price d--flex align--center justify--between">
+                <li><a href="" class="btn bg--accent">Call Agent</a></li>
+                <li>PHP 1,450,000.00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="featured__img bg--dark clr--light">
+      <div class="wrapper d--flex justify--between align--center">
+        <div class="content">
+          <ul>
+            <li>Loverboy</li>
+            <li>CEO</li>
+          </ul>
+
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              nobis iure aspernatur accusamus quae doloremque sapiente
+              praesentium aliquid, autem nemo, itaque nam modi omnis consectetur
+              non assumenda dolor, minima expedita.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script>
+      var slider = tns({
+        container: ".block__slider",
+        items: 1,
+        slideBy: "page",
+        autoplay: true,
+        controls: false,
+        navPosition: "bottom",
+      });
+    </script>
+    <script>
+      const btnModal = document.querySelector("#btnModal");
+      const modal = document.querySelector(".backdraft");
+
+      btnModal.addEventListener("click", function () {
+        modal.classList.add("show");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("backdraft")) {
+          modal.classList.remove("show");
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          modal.classList.remove("show");
+        }
+      });
+
+      const showHours = document.querySelector("#showHours");
+      const storeHours = document.querySelector(".store__hours");
+
+      showHours.addEventListener("click", function (e) {
+        e.preventDefault();
+        storeHours.classList.toggle("show");
+        if (storeHours.classList.contains("show")) {
+          showHours.textContent = "Hide All Hours";
+        } else {
+          showHours.textContent = "Show All Hours";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+.department {
+  padding: 5rem 0;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-gap: 2rem;
+  }
+  &--card {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    li {
+      margin-right: 1.8rem;
+      img {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
+}
+
+.faculty {
+  padding: 6rem 0;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--card {
+    background-color: $clr-light;
+    border-radius: 2rem;
+    img {
+      @include imgFit(15rem, 15rem);
+      border-radius: 50rem;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 2rem;
+      p {
+        text-align: justify;
+      }
+      small {
+        color: $clr-accent;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+      }
+    }
+  }
+  .president {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+  }
+}

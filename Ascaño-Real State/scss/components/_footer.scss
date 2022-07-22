@@ -1,0 +1,13 @@
+.footer {
+  background-color: $clr-dark;
+  color: $clr-light;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  li {
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Open+Sans:wght@400;700;800&display=swap");
+@font-face {
+  font-family: "boost_next_regular";
+  src: url("../../fonts/boostnext-regular-webfont.woff2") format("woff2"),
+    url("../../fonts/boostnext-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $font-size;
+  font-family: "boost_next_regular";
+  line-height: 1.6;
+  transition: all 0.5s cubic-bezier(0.91, 0.38, 0.63, 0.78);
+  overflow-x: hidden;
+}
+
+body.nav-open {
+  transform: translateX(80%);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-dark;
+}
+
+.block__header {
+  font-family: $font-secondary;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  margin-bottom: 3rem;
+  text-align: center;
+  border-top: 1px solid $clr-border;
+  border-bottom: 1px solid $clr-border;
+}

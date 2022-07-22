@@ -1,0 +1,50 @@
+.about {
+  &__wrapper {
+    gap: 5rem;
+    @include mediaQuery() {
+      flex-direction: column;
+    }
+  }
+  &__content2 {
+    max-width: 48rem;
+  }
+  h2 {
+    font-size: clamp(2rem, 6vw, 12rem);
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.socmed__icons {
+  margin-left: -45px;
+  color: $clr-accent;
+  padding: 4rem;
+  font-size: 3rem;
+  &__icons i {
+    margin: 0 5px;
+  }
+}
+
+.about__me__img {
+  img {
+    width: 55rem;
+    height: 55rem;
+    @include mediaQuery {
+      width: 35rem;
+      height: 35rem;
+    }
+  }
+}
+
+.about__wrapper {
+  .about__me__content2 {
+    @include mediaQuery() {
+      order: 2;
+    }
+  }
+  .about__me__img {
+    @include mediaQuery() {
+      order: 1;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.contact {
+  &__wrapper {
+    gap: 5rem;
+    @include mediaQuery() {
+      flex-direction: column;
+    }
+  }
+  &__content3 {
+    max-width: 48rem;
+  }
+  h2 {
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 600;
+    line-height: 1;
+  }
+  td {
+    padding: 1rem 1rem;
+    i {
+      color: $clr-accent;
+      font-size: 20px;
+    }
+  }
+  &__form {
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      color: gray;
+    }
+  }
+}

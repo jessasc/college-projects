@@ -1,0 +1,7 @@
+header {
+  h2 {
+    @include mediaQuery($break-md) {
+      display: none;
+    }
+  }
+}

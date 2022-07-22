@@ -1,0 +1,227 @@
+.banner {
+  background-image: url(../../images/bg_banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mediaQuery($break-sm) {
+    background-image: url(../../images/bg_banner_sm.jpg);
+  }
+  &__wrapper {
+    min-height: 100vh;
+  }
+  &__content {
+    span {
+      display: block;
+      font-size: 1.4rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 2.5rem);
+      margin-bottom: 3rem;
+    }
+    max-width: 40rem;
+    form {
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+    input,
+    textarea {
+      padding: 1.2rem 1rem;
+      width: 100%;
+      margin-bottom: 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      &::placeholder {
+        text-transform: capitalize;
+        font-family: $font-primary;
+      }
+    }
+    textarea {
+      height: 15rem;
+    }
+
+    button {
+      padding: 1rem;
+      border: none;
+      color: $clr-light;
+      border-radius: 0.5rem;
+      min-width: 15rem;
+      margin-left: auto;
+      display: block;
+    }
+  }
+}
+
+.offers {
+  padding: 8rem 0;
+  &__grid {
+    display: grid;
+    grid-template-areas:
+      "offer1 offer2 offerimg"
+      "offer3 offer4 offerimg";
+
+    @include mediaQuery($break-sm) {
+      grid-template-areas:
+        "offerimg"
+        "offer1"
+        "offer2"
+        "offer3"
+        "offer4";
+    }
+
+    grid-gap: 2rem;
+  }
+
+  .offer1 {
+    grid-area: offer1;
+  }
+  .offer2 {
+    grid-area: offer2;
+  }
+  .offer3 {
+    grid-area: offer3;
+  }
+  .offer4 {
+    grid-area: offer4;
+  }
+  .offerimg {
+    grid-area: offerimg;
+  }
+
+  &__card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    img {
+      margin-bottom: 1rem;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .offerimg {
+    max-width: 35rem;
+    img {
+      transform: translateY(5rem);
+    }
+    p {
+      position: relative;
+      margin-bottom: 0;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.about {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+      min-height: 120rem;
+    }
+  }
+  &__content {
+    max-width: 40rem;
+    padding: 10rem 0;
+    p {
+      margin-bottom: 2rem;
+      text-align: justify;
+      margin-top: 6rem;
+    }
+    li {
+      i {
+        color: $clr-accent;
+        padding-right: 0.5rem;
+      }
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img {
+    img {
+      position: absolute;
+      bottom: 0;
+    }
+    .about__tooth {
+      bottom: 15rem;
+      left: 8rem;
+    }
+  }
+}
+
+.certified {
+  background-image: url(../../images/bg_certified.jpg);
+  background-position: center center;
+  background-size: cover;
+
+  &__wrapper {
+    min-height: 70vh;
+
+    @include mediaQuery($break-sm) {
+      align-items: center;
+    }
+  }
+
+  &__content {
+    max-width: 40rem;
+    position: relative;
+    h3 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      margin-bottom: 3rem;
+    }
+
+    .certified__icon {
+      position: absolute;
+      padding: 1rem;
+      top: 0;
+      left: 100%;
+      background-color: $clr-accent;
+      width: 11rem;
+      height: 11rem;
+      display: flex;
+      flex-direction: column;
+      @include centerAll;
+
+      @include mediaQuery($break-sm) {
+        display: none;
+      }
+
+      img {
+        display: block;
+      }
+      p {
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.smile {
+  background-image: linear-gradient(
+      to right,
+      rgba($clr-blue, 1) 55%,
+      transparent
+    ),
+    url(../../images/bg_cta.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  @include mediaQuery($break-sm) {
+    background-image: linear-gradient(
+      to right,
+      rgba($clr-blue, 1),
+      rgba($clr-blue, 1)
+    );
+  }
+
+  &__content {
+    max-width: 45rem;
+  }
+  p {
+    margin-bottom: 5rem;
+  }
+}

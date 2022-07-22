@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+  </head>
+  <body class="">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <nav class="d--flex align--center">
+            <img src="./images/logo.png" alt="" />
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <label class="toggle__darkmode">
+            <input type="checkbox" id="checkbox" />
+            <div class="slide"></div>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <section class="contact">
+      <div class="container">
+        <h2 class="block__header">
+          Let's Talk About <br />
+          Something Nice
+        </h2>
+        <div class="contact__wrapper">
+          <div class="contact__info">
+            <ul>
+              <li>
+                356 Yonge Street, Toronto <br />
+                Ontario M5B 1S5 Canada
+              </li>
+              <li>info@theblog.com</li>
+              <li>(345) 555 5555</li>
+            </ul>
+          </div>
+          <div class="contact__form">
+            <form action="">
+              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Subject" />
+              <textarea placeholder="Message"></textarea>
+              <button>Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <img src="./images/logo.png" alt="" />
+          <ul class="d--flex align--center justify--center">
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+
+          <ul class="d--flex align--center justify--center">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+          </ul>
+          <p>Copyright 2020. All right reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const body = document.querySelector("body");
+      const switchBtn = document.querySelector(".toggle__darkmode");
+      switchBtn.addEventListener("change", () =>
+        body.classList.toggle("darkmode")
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+.header {
+  &__wrapper {
+    @include mediaQuery {
+      flex-direction: column;
+    }
+  }
+  padding: 1rem 0;
+
+  &__brand {
+    @include mediaQuery($break-sm) {
+      display: none;
+    }
+  }
+  &__brand__mobile {
+    @include mediaQuery($break-sm) {
+      padding-bottom: 1rem;
+      display: block;
+      display: flex;
+      img {
+        margin-right: 5rem;
+        height: 5rem;
+        width: 5rem;
+      }
+      ul li {
+        margin-bottom: -1rem;
+      }
+      border-bottom: 2px solid $clr-light;
+    }
+    color: $clr-light;
+    display: none;
+  }
+
+  nav {
+    @include mediaQuery {
+      margin-top: 1rem;
+    }
+    li {
+      padding: 0 2rem;
+      border-right: 1px solid $clr-light;
+      text-transform: uppercase;
+    }
+    li:last-child {
+      border-right: none;
+    }
+  }
+}

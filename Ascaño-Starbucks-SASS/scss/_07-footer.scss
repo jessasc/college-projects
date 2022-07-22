@@ -1,0 +1,50 @@
+.footer {
+  &__wrapper {
+    border-top: 1px solid rgba($clr-dark, 0.1);
+  }
+  .social__media {
+    li {
+      margin-right: 1.8rem;
+    }
+    a {
+      background-color: $clr-dark;
+      padding: 0.7rem;
+      border-radius: 50%;
+      @include centerAll;
+    }
+    i {
+      font-size: 1.8rem;
+      color: $clr-light;
+    }
+  }
+
+  .policy {
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+    li {
+      padding: 0 2rem;
+      border-right: 1px solid $clr-dark;
+      @include mediaQuery($break-md) {
+        padding: 1rem 0;
+        border-right: none;
+      }
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    li:first-child {
+      padding-left: 0;
+    }
+    li:last-child {
+      border: none;
+    }
+  }
+  p {
+    @include mediaQuery($break-md) {
+      font-size: 12px;
+    }
+  }
+}

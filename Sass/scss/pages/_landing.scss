@@ -1,0 +1,25 @@
+.hero {
+  @include centerAll;
+  height: 60vh;
+  &__wrapper {
+    h1 {
+      font-size: clamp(3rem, 6vw, 10rem);
+      @include mediaQuery(900px) {
+        color: $clr-accent;
+      }
+    }
+
+    h3 {
+      max-width: 56rem;
+      margin: 0 auto;
+      font-size: clamp(1.3rem, 1.3vw, 7rem);
+    }
+
+    ul {
+      @include centerAll;
+      li {
+        margin: 3rem 1rem;
+      }
+    }
+  }
+}

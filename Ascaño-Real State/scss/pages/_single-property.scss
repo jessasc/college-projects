@@ -1,0 +1,50 @@
+.luxury {
+  padding: 10rem 0 15rem;
+}
+
+.featured__img {
+  picture {
+    transform: translateY(-10rem);
+    img {
+      @include imgFit(100%, 60rem);
+    }
+  }
+}
+
+.luxury__details {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 45rem 1fr;
+    gap: 4rem;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  .house__details {
+    @include mediaQuery(414px) {
+      width: 100%;
+    }
+  }
+  .house__details__wrapper {
+    h2 {
+      font-weight: 100;
+    }
+    padding: 4rem 5rem;
+  }
+}
+
+.interior {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-gap: 3rem;
+  }
+  img {
+    @include imgFit(100%);
+  }
+}

@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+// BASE
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $ff-primary;
+  line-height: 1.4;
+  color: $clr-dark;
+  overflow: auto;
+}

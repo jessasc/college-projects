@@ -1,0 +1,25 @@
+.header {
+  &__wrapper {
+    @include mediaQuery {
+      flex-direction: column;
+    }
+  }
+  padding: 1rem 0;
+  &__brand {
+    img {
+      margin-right: 1rem;
+    }
+    li:first-child {
+      font-weight: bold;
+      line-height: 1;
+    }
+    li:last-child {
+      font-size: 1.2rem;
+    }
+  }
+  &__direction {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}

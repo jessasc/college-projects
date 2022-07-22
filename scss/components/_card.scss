@@ -1,0 +1,47 @@
+.card {
+    &__wrapper {
+        @include grid(4, 2rem);
+    }
+
+    img {
+        @include imgFit(100%, 15rem);
+        display: block;
+        
+    }
+
+    &__content {
+        padding: 1rem;
+        border: 1px solid $clr-border;
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            li {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            li:first-child {
+                text-decoration: line-through;
+                opacity: 0.5;
+            }
+            
+        }
+
+        .btn__add {
+            padding: 1rem;
+            text-align: center;
+            display: block;
+            background-color: $clr-accent;
+            margin-top: 2rem;
+            color: $clr-light;
+        }
+    }
+}

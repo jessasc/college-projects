@@ -1,0 +1,23 @@
+$clr-accent: #f8901f;
+$clr-dark: #3b3b3b;
+$clr-light: hsl(0, 0%, 100%);
+$clr-border: #e7e7e7;
+$clr-gray: #f8f8f8;
+
+$clr-red: hsl(7, 80%, 57%);
+$clr-blue: #aedad9;
+$clr-green: hsl(103, 83%, 39%);
+$clr-orange: #f46c22;
+
+$font-primary: "Open Sans", Arial, sans-serif;
+$font-secondary: "Antic Didone", serif;
+
+$break-sm: 640px;
+$break-md: 768px;
+$break-lg: 1024px;
+$break-xl: 1280px;
+
+$container-padding: 1.5rem;
+$container-width: 115rem;
+$font-size: 1.6rem;
+$header-size: clamp(2rem, 7vw, 3rem);

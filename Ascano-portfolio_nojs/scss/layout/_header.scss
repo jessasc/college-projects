@@ -1,0 +1,124 @@
+.header {
+  padding: 2rem 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+    @include mediaQuery {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 100%;
+      background-color: var(--clr-bg);
+      display: grid;
+      place-items: center;
+      z-index: 99999;
+      transition: right 0.5s ease;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      @include mediaQuery {
+        transform: translateY(-15rem);
+        flex-direction: column;
+        margin-top: 25rem;
+      }
+      li {
+        margin-right: 2rem;
+        @include mediaQuery {
+          margin-right: 0rem;
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+      }
+      a {
+        @include mediaQuery {
+          padding: 1rem;
+        }
+        color: $clr-accent;
+      }
+    }
+  }
+}
+
+.toggle__open {
+  display: none;
+  span {
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--clr-text);
+    display: block;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+  }
+  @include mediaQuery {
+    display: block;
+  }
+}
+
+.toggle__close {
+  @extend .toggle__open;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  margin-bottom: 0;
+  span:nth-child(1) {
+    transform: rotate(45deg) translate(-1px, 10px);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    transform: rotate(-45deg) translate(1px, -13px);
+  }
+}
+
+//SLIDER
+input[type="checkbox"] {
+  appearance: none;
+}
+
+label {
+  height: 3rem;
+  position: relative;
+  width: 6rem;
+}
+
+.slide {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border-radius: 3rem;
+}
+
+//Bilog
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: block;
+  transition: 0.5s ease;
+}
+
+input:checked + .slide {
+  background-color: $clr-accent;
+}
+
+//Magslid
+input:checked + .slide::after {
+  transform: translateX(3rem);
+}

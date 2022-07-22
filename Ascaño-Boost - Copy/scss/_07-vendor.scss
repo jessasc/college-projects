@@ -1,0 +1,21 @@
+.tns-outer {
+  overflow: hidden;
+  max-width: 100%;
+  & > button {
+    display: none;
+  }
+}
+
+.tns-nav {
+  text-align: center;
+  button {
+    margin: 1.3rem 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: none;
+  }
+  .tns-nav-active {
+    background-color: $clr-accent;
+  }
+}

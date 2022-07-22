@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+  background: url("https://images.unsplash.com/photo-1610307766999-01f45d259959?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+label {
+  position: fixed;
+  top: 4rem;
+  right: 2.8rem;
+  z-index: 4;
+  pointer-events: none;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  outline: none;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.bg-nav {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+  z-index: 1;
+  background-image: radial-gradient(#363636, #888);
+  /* background: blue; */
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+nav {
+  width: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: fixed;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+nav ul li {
+  padding: 2rem;
+  text-align: center;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+/*TOGGLE 3 LINE WHITE*/
+.toggle-icon,
+.toggle-icon::before,
+.toggle-icon::after {
+  width: 2.5rem;
+  height: 2px;
+  background-color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.toggle-icon::before,
+.toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.toggle-icon::before {
+  top: 0.8rem;
+}
+
+.toggle-icon::after {
+  top: -0.8rem;
+}
+
+input[type="checkbox"]:checked + .bg-nav {
+  transform: scale(100);
+}
+
+input[type="checkbox"]:checked ~ nav {
+  width: 100%;
+  opacity: 1;
+}
+
+/*Animation ng Button-Rotate*/
+input[type="checkbox"]:checked ~ .toggle-btn .toggle-icon {
+  background-color: transparent;
+}
+
+input[type="checkbox"]:checked ~ .toggle-btn .toggle-icon:before {
+  transform: rotate(-405deg);
+  top: 0;
+}
+
+input[type="checkbox"]:checked ~ .toggle-btn .toggle-icon:after {
+  transform: rotate(-315deg);
+  top: 0;
+}

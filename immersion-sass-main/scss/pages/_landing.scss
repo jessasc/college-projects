@@ -1,0 +1,126 @@
+.hero {
+  &__wrapper {
+    @include mediaQuery {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 40rem;
+    @include mediaQuery {
+      order: 2;
+    }
+    h1 {
+      font-size: clamp(3rem, 6vw, 8rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__img {
+    @include mediaQuery {
+      order: 1;
+      margin-bottom: 3rem;
+    }
+    img {
+      width: 55rem;
+      height: 55rem;
+      @include mediaQuery {
+        width: 35rem;
+        height: 35rem;
+      }
+    }
+  }
+}
+
+.services {
+  //   padding: 10rem 0;
+  &__wrapper {
+    @include grid(3, 4rem);
+    @include mediaQuery {
+      @include grid(1, 4rem);
+      margin: 0rem 2rem;
+    }
+  }
+
+  &__item {
+    p {
+      min-height: 13rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.about {
+  &__wrapper {
+    @include mediaQuery {
+      flex-direction: column;
+    }
+  }
+  &__img {
+    img {
+      @include mediaQuery {
+        width: 35rem;
+        height: 35rem;
+      }
+    }
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 47.7rem;
+      width: 47.7rem;
+      top: 0;
+      left: 0;
+      background-color: $clr-accent;
+      z-index: 999;
+      border-radius: 50%;
+      mix-blend-mode: overlay;
+      @include mediaQuery {
+        width: 35rem;
+        height: 35rem;
+      }
+    }
+  }
+  &__content {
+    max-width: 48rem;
+  }
+}
+
+.trends {
+  &__wrapper {
+    @include grid(3, 4rem);
+    @include mediaQuery {
+      @include grid(1, 4rem);
+    }
+  }
+
+  &__card {
+    img {
+      background-color: $clr-light;
+      @include imgFit(100%, auto);
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+
+    &__content {
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
+  }
+}
+
+.calltoaction {
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.icons {
+  i {
+    font-size: 25px;
+    margin: 0 2px;
+  }
+}

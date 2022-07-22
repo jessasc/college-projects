@@ -1,0 +1,51 @@
+.cstudies {
+  padding: 5rem 0;
+  li {
+    margin-right: 2rem;
+  }
+  nav {
+    @include centerAll;
+  }
+  &__wrapper {
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    img {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+  .bsit {
+    border-top: 4px solid $clr-accent;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    &__content {
+      padding: 3rem;
+      small {
+        font-style: italic;
+      }
+    }
+  }
+
+  .bscs {
+    border-top: 4px solid $clr-accent;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    &__content {
+      padding: 3rem;
+      small {
+        font-style: italic;
+      }
+      a {
+        color: $clr-accent;
+        font-weight: bold;
+      }
+    }
+  }
+}

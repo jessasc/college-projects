@@ -1,0 +1,93 @@
+.banner {
+  padding: 10rem 0 15rem;
+  &__wrapper {
+    width: 73rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1.2;
+  }
+  p {
+    font-size: 2rem;
+  }
+  ul {
+    li {
+      margin: 0 2rem;
+      a,
+      h4 {
+        font-size: 1.8rem;
+        color: $clr-light;
+      }
+      h4 {
+        margin-right: 2rem;
+      }
+      a {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.featured__img {
+  picture {
+    transform: translateY(-10rem);
+  }
+}
+
+.blog__body {
+  max-width: 70rem;
+  margin: 0 auto;
+  .bar {
+    width: 4rem;
+    height: 0.4rem;
+    display: block;
+    margin: 2rem auto 5rem;
+    background-color: $clr-dark;
+  }
+  p {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.stories {
+  &__wrapper {
+    @include grid(3, 1rem);
+    @include mediaQuery($break-md) {
+      @include grid(1, 2rem);
+    }
+  }
+  &__card {
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+    img {
+      @include imgFit(100%, auto);
+      display: block;
+    }
+  }
+  article {
+    padding: 2rem 2.5rem;
+    background-color: hsl(160%, 32%, 97%);
+    min-height: 40rem;
+    span {
+      text-transform: uppercase;
+      color: hsl(160%, 100%, 19%);
+      font-weight: bold;
+    }
+    a {
+      color: $clr-dark;
+      &:hover {
+        color: hsl(160%, 100%, 19%);
+      }
+    }
+    h3 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}

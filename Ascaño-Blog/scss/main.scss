@@ -1,0 +1,19 @@
+@import "01-variables";
+@import "02-reset";
+@import "03-base";
+@import "04-mixins";
+@import "05-grid";
+@import "06-utilities";
+@import "07-vendor";
+
+// COMPONENTS
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/card.scss";
+// PAGES
+
+@import "./pages/landing.scss";
+@import "./pages/blog.scss";
+@import "./pages/contact.scss";
+@import "./pages/search.scss";
+@import "./pages/aboutB.scss";

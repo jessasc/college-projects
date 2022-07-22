@@ -1,0 +1,298 @@
+// .banner {
+//   position: relative;
+//   &__body {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-gap: 3rem;
+
+//     @include mediaQuery($break-md) {
+//       height: 90vh;
+//       grid-template-columns: 1fr;
+//     }
+//   }
+//   &__content {
+//     small {
+//       font-size: 1.3rem;
+//       color: $clr-orange;
+//       letter-spacing: 1rem;
+//       text-transform: uppercase;
+//     }
+//     h3 {
+//       font-size: clamp(2rem, 6vw, 4rem);
+//       color: $clr-dark;
+//       line-height: 1.2;
+//     }
+//   }
+//   img {
+//     position: absolute;
+//     top: 4rem;
+//     right: 0;
+//     width: 70rem;
+//     height: 40rem;
+//     object-fit: cover;
+
+//     @include mediaQuery(1368px) {
+//       top: 3rem;
+//       width: 50rem;
+//     }
+
+//     @include mediaQuery($break-lg) {
+//       top: 3rem;
+//       width: 50rem;
+//     }
+
+//     @include mediaQuery(964px) {
+//       top: 3rem;
+//       width: 40rem;
+//     }
+
+//     @include mediaQuery($break-md) {
+//       top: 50%;
+//       width: 100%;
+//     }
+//   }
+// }
+
+.banner {
+  position: relative;
+  min-height: 100vh;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    @include mediaQuery($break-md) {
+      grid-template-columns: 1fr;
+      min-height: 80vh;
+    }
+  }
+  &__content {
+    margin-top: 6rem;
+    @include mediaQuery($break-md) {
+      margin-top: 63rem;
+    }
+    h1 {
+      font-size: clamp(3rem, 10vw, 20rem);
+      line-height: 1;
+      font-family: $font-secondary;
+      color: $clr-dark;
+      position: absolute;
+      z-index: 9999;
+    }
+    p {
+      margin-top: 30rem;
+      @include mediaQuery($break-md) {
+        margin-top: 12rem;
+      }
+    }
+    a {
+      font-family: $font-secondary;
+      font-weight: bold;
+    }
+  }
+  img {
+    position: absolute;
+    right: 0;
+    width: 60rem;
+    height: 60rem;
+    // object-fit: cover;
+    // @include mediaQuery($break-md) {
+    //   @include imgFit(60rem, 40rem);
+    // }
+  }
+}
+
+.collection {
+  @include mediaQuery($break-md) {
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+  }
+  &__img {
+    img {
+      @include imgFit(58rem, 42rem);
+      @include mediaQuery($break-md) {
+        @include imgFit(100%);
+      }
+    }
+  }
+  &__content {
+    @include mediaQuery($break-md) {
+      width: 100%;
+    }
+    h1 {
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-family: $font-secondary;
+    }
+    a {
+      font-family: $font-secondary;
+      font-weight: bold;
+    }
+  }
+}
+
+.fresh {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .right {
+    .new {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      @include mediaQuery($break-md) {
+        flex-direction: column;
+        margin-bottom: 3rem;
+      }
+      img {
+        @include imgFit(20rem, 20rem);
+        @include mediaQuery($break-md) {
+          @include imgFit(100%);
+        }
+      }
+      h4 {
+        font-family: $font-secondary;
+        font-size: 2.5rem;
+      }
+    }
+
+    .shopnow {
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+      @include mediaQuery($break-md) {
+        // flex-direction: column;
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem;
+      }
+      img {
+        @include imgFit(36rem, 20rem);
+        @include mediaQuery($break-md) {
+          @include imgFit(100%);
+          order: 1;
+        }
+      }
+      &__content {
+        @include mediaQuery($break-md) {
+          order: 2;
+        }
+        h4 {
+          // margin-left: 2.5rem;
+          margin-top: 7rem;
+          text-align: center;
+          font-family: $font-secondary;
+          font-size: 2.5rem;
+          @include mediaQuery($break-md) {
+            margin-top: 1rem;
+            margin-left: 0;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  .left {
+    img {
+      @include imgFit(58rem, 42rem);
+      @include mediaQuery($break-md) {
+        @include imgFit(100%);
+      }
+      // @include mediaQuery(414px) {
+      //   @include imgFit(100%);
+      // }
+    }
+  }
+}
+
+.catalogue {
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+  }
+  .img1 {
+    img {
+      @include imgFit(35rem, 70rem);
+      @include mediaQuery($break-md) {
+        @include imgFit(100%, 90rem);
+        order: 1;
+      }
+    }
+  }
+  .img2 {
+    img {
+      @include imgFit(35rem, 50rem);
+      @include mediaQuery($break-md) {
+        @include imgFit(100%, 70rem);
+        order: 2;
+      }
+    }
+  }
+  &__content {
+    text-align: center;
+    margin-top: 10rem;
+    @include mediaQuery($break-md) {
+      order: 3;
+      margin-top: 0;
+    }
+    h1,
+    a {
+      font-family: $font-secondary;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.subscribe {
+  background-color: $clr-border;
+  text-align: center;
+  h1 {
+    font-family: $font-secondary;
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+  p {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form {
+    margin-bottom: 2.5rem;
+    input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $clr-dark;
+      width: 30rem;
+      padding: 1rem;
+      margin-right: 3rem;
+    }
+  }
+  a {
+    font-family: $font-secondary;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}

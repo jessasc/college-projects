@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    background-color: #181818;
+    color: #fff;
+}
+
+.container {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.youtube {
+    padding: 10rem 0;
+}
+
+.youtube__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  
+}
+.youtube__card {
+    transition: .5s ease;
+    margin: 0 .8rem;
+}
+
+.youtube__card video {   
+    width: 100%;
+    display: block;
+    cursor: pointer;
+   
+}
+.video__content {
+    position: relative;
+}
+
+
+
+.video__content span {   
+    position: absolute;
+    bottom: 0rem;
+    right: -.2rem;
+    padding: .3rem .5rem;
+    font-size: 1.2rem;
+    background-color: #000;
+    color: #fff;
+    z-index: 9999;
+    display: none;
+}
+
+.video__content span.show {
+    display: block;
+}
+
+.youtube__card__box {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem .5rem;
+}
+
+.youtube__avatar img {
+    border-radius: 50%;
+}
+
+.youtube__body {
+    margin-left: 1.5rem;
+    
+}
+.youtube__body .title{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    
+    width: 27ch;
+    overflow: hidden;
+    height: 4rem;
+    text-overflow: ellipsis;
+}
+
+.youtube__body .creator{
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.youtube__body .views{
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+ .actions{
+    list-style: none;
+ 
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+    display: none;
+}
+
+ .actions a {
+    padding: .5rem 1rem;
+    background-color: #212121;
+    color: #fff;
+    width: 100%;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.youtube__body .views li {
+    margin-right: 1.6rem;
+}
+
+.youtube__body .views li:first-child {
+    position: relative;
+}
+
+.youtube__body .views li:first-child::after {
+    content: '';
+    position: absolute;
+    top: .7rem;
+    right: -1rem;
+    width: .3rem;
+    height: .3rem;
+    background:#fff;
+    border-radius: 50%;
+}
+
+
+.youtube__body .views li span {
+    padding-right: 0.3rem;
+}
+
+
+
+.youtube__card.zoom {
+    transform: scale(1.2);
+    position: relative;
+    z-index: 9999;
+}
+
+.youtube__card.zoom .youtube__card__content {
+    
+    background-color: #1e1e1e;
+}
+
+.youtube__card.zoom  .actions {
+    display: grid;
+}

@@ -1,0 +1,278 @@
+.banner {
+  margin-top: 8rem;
+  @include mediaQuery($break-sm) {
+    margin-top: 0;
+  }
+  h2 {
+    @include mediaQuery($break-sm) {
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 4rem;
+    }
+    margin-left: 55rem;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    @include mediaQuery {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__img {
+    @include mediaQuery($break-md) {
+      order: 2;
+      margin-top: 30rem;
+    }
+    height: 643.77px;
+    position: relative;
+    padding-top: 10rem;
+    img {
+      position: absolute;
+      bottom: 0;
+      @include mediaQuery($break-md) {
+        width: 100%;
+        bottom: 20rem;
+      }
+    }
+    p {
+      @include mediaQuery($break-md) {
+        margin-left: 0;
+        margin-top: 33rem;
+        @include center2;
+        text-align: center;
+      }
+      text-transform: uppercase;
+      color: $clr-light;
+      font-weight: bold;
+      font-size: 2rem;
+      z-index: 99999;
+      max-width: 25rem;
+      margin-left: 50rem;
+    }
+  }
+  &__details {
+    @include mediaQuery($break-md) {
+      order: 1;
+    }
+    padding: 3rem 0;
+    .form__content {
+      h4 {
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+      span:first-child,
+      span:last-child {
+        font-size: 4rem;
+      }
+      .spanbig {
+        font-size: 7rem;
+      }
+    }
+    form {
+      padding: 4.3rem 5rem;
+      input[type="text"] {
+        width: 100%;
+        padding: 15px 20px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        font-weight: bold;
+        border: none;
+        border-radius: 0.5rem;
+        color: $clr-gray;
+        font-family: "din-regular";
+      }
+    }
+    .btn {
+      @include centerAll;
+      margin: 2rem;
+    }
+  }
+}
+
+.location {
+  &__wrapper {
+    @include grid(2, 1rem);
+    gap: 5rem;
+    @include mediaQuery($break-md) {
+      @include grid(1, 1rem);
+    }
+  }
+
+  &__info {
+    @include mediaQuery($break-sm) {
+      max-width: 35rem;
+    }
+    ul {
+      list-style: none;
+    }
+    @include mediaQuery($break-md) {
+      order: 1;
+      padding: 2.5rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1;
+    }
+    .address {
+      font-size: 1.8rem;
+    }
+    .number {
+      i {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  .map {
+    border: 2rem solid $clr-accent;
+  }
+
+  .container__box {
+    width: 40rem;
+    height: 40rem;
+    position: relative;
+    margin: 20px;
+  }
+  .box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; //left or right yung blue
+  }
+  .stack-top {
+    z-index: 9999;
+    margin: 20px;
+  }
+
+  .tunaynabox {
+    @include mediaQuery($break-md) {
+      order: 2;
+    }
+    small {
+      float: right;
+      margin-right: 11rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+
+.calltoaction {
+  h2 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.services2 {
+  &__wrapper {
+    @include grid(2, 1rem);
+    gap: 9rem;
+    @include mediaQuery($break-md) {
+      @include grid(1, 1rem);
+    }
+  }
+  .container__box {
+    @include mediaQuery($break-md) {
+      order: 2;
+      align-items: center;
+    }
+  }
+  &__details {
+    @include mediaQuery($break-md) {
+      order: 1;
+    }
+
+    h2 {
+      font-size: clamp(3rem, 6vw, 4rem);
+    }
+  }
+  img {
+    display: block;
+    width: 40rem;
+    height: 40rem;
+    border: 2rem solid $clr-accent;
+  }
+  .container__box {
+    width: 40rem;
+    height: 40rem;
+    position: relative;
+    margin: 20px;
+  }
+  .box {
+    margin-top: 5rem;
+    width: 100%;
+    height: 30rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .stack-top {
+    z-index: 9999;
+    margin: 20px;
+  }
+}
+
+.hero {
+  &__wrapper {
+    @include grid(2, 1rem);
+    gap: 3rem;
+    @include mediaQuery($break-md) {
+      @include grid(1, 1rem);
+    }
+  }
+
+  .hprice {
+    padding: 5rem 0;
+  }
+  .btn {
+    margin-top: 2rem;
+  }
+
+  .container__box {
+    width: 40rem;
+    height: 50rem;
+    position: relative;
+    margin: 20px;
+  }
+  .box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; //left or right yung blue
+  }
+  .stack-top {
+    z-index: 9999;
+    margin: 20px;
+    img {
+      // width: 40rem;
+      height: 50rem;
+    }
+  }
+
+  .container__box2 {
+    width: 40rem;
+    height: 50rem;
+    position: relative;
+    margin: 20px;
+  }
+  .box2 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; //left or right yung blue
+  }
+  .stack-top2 {
+    z-index: 9999;
+    margin: 20px;
+  }
+}

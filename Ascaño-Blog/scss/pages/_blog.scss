@@ -1,0 +1,134 @@
+.blog__banner {
+  padding: 5rem 0;
+  background-color: $clr-dark;
+  color: $clr-light;
+  li {
+    font-size: 1.3rem;
+  }
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem 0;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+  }
+  img {
+    @include imgFit(100%, 35rem);
+  }
+}
+
+.blog {
+  padding: 5rem 0;
+  &__grid {
+    display: grid;
+    grid-template-columns: 45rem 1fr;
+    grid-gap: 3rem;
+    @include mediaQuery {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__info {
+    justify-self: flex-end;
+    align-self: flex-start;
+    max-width: 18rem;
+    width: 100%;
+    min-height: 9rem;
+    background-color: $clr-dark;
+    padding: 1rem;
+    color: $clr-light;
+    order: 1;
+
+    // @include mediaQuery {
+    //   order: 2;
+    // }
+    p {
+      font-weight: 400;
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    ul {
+      margin-bottom: 1rem;
+      li {
+        font-size: 1rem;
+      }
+      li:nth-child(1) {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  article {
+    order: 2;
+    text-align: justify;
+    h3 {
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      line-height: 1;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      text-align: left;
+    }
+    img {
+      @include imgFit(100%);
+    }
+    ul {
+      opacity: 0.5;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      li {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.single {
+  padding: 5rem 0;
+  li {
+    font-size: 1.3rem;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem 0;
+    position: relative;
+    text-align: left;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    position: absolute;
+    bottom: 4rem;
+    left: 34rem;
+    color: $clr-light;
+    max-width: 40rem;
+    a {
+      color: $clr-light;
+    }
+    @include mediaQuery($break-sm) {
+      left: 2rem;
+    }
+  }
+  img {
+    @include imgFit(100%, 60rem);
+  }
+}

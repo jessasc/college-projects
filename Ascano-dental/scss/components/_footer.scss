@@ -1,0 +1,55 @@
+.footer {
+  padding: 5rem 0;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    grid-gap: 3rem;
+
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    h3 {
+      color: $clr-blue;
+      margin-bottom: 2rem;
+    }
+    img {
+      @include imgFit(26rem, auto);
+
+      @include mediaQuery($break-sm) {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    ul {
+      li {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+    a {
+      transition: 0.5s ease;
+      &:hover {
+        color: $clr-accent;
+        text-decoration: underline;
+      }
+    }
+    .icon__sm {
+      i {
+        font-size: 2rem;
+      }
+    }
+    .address {
+      li {
+        display: flex;
+        align-items: flex-start;
+        line-height: 1.5;
+        i {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

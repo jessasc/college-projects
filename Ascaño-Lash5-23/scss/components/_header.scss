@@ -1,0 +1,12 @@
+.header {
+  @include mediaQuery {
+    padding: 1.5rem 1rem;
+  }
+  &__btn {
+    border: 2px solid $clr-accent;
+    padding: 2rem 3.5rem;
+    color: $clr-accent;
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
+}

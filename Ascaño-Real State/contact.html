@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+  </head>
+  <body>
+    <header class="header py--1">
+      <div class="container">
+        <div class="header__wrapper d--flex align--center justify--between">
+          <div class="header__brand d--flex align--center">
+            <figure class="branding">
+              <img src="./images/logo.jpg" />
+            </figure>
+          </div>
+
+          <div class="header__actions align--center">
+            <ul class="mobile__actions d--flex align--center text--dark">
+              <li><a href="">Contact</a></li>
+              <li><a href="">Properties</a></li>
+              <li><a href="">About</a></li>
+            </ul>
+          </div>
+
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="block__header blogheader text--center mb--6">
+      <p><span class="block__small">Connect</span></p>
+      <h2 class="block__title">Let's talk about your idea</h2>
+    </div>
+
+    <section class="contact__banner mb--5 bg--gray">
+      <div class="container">
+        <div class="contact__banner__wrapper">
+          <div class="contact__banner__content">
+            <h1 class="mb--2">Get Touch With Us</h1>
+            <p class="mb--3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              reprehenderit eius placeat enim est officiis sequi provident
+              similique corporis tempore optio ut hic praesentium, laboriosam
+              dolore veniam quaerat consequuntur.
+            </p>
+            <a href="#" class="btn bg--accent mb--2">Request a Skype Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact py--5">
+      <div class="container">
+        <div class="contact__wrapper">
+          <div class="contact__question bg--dark text--light">
+            <div class="contact__question__wrapper">
+              <h3 class="mb--2">Send Message</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Numquam, at.
+              </p>
+
+              <form action="">
+                <label>Full Name</label><br />
+                <input type="text" />
+
+                <label>Email</label><br />
+                <input type="text" />
+
+                <label>Subject</label><br />
+                <input type="text" />
+
+                <label>Message</label><br />
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </form>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail__wrapper">
+              <div class="callus">
+                <h4>Call Us</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem labore aliquam doloribus? Aliquam ullam
+                </p>
+                <ul>
+                  <li class="d--flex">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>(123) 456 7890</p>
+                  </li>
+                  <li class="d--flex">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>(123) 456 7890</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="visitus">
+                <h4>Visit Our Location</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem labore aliquam doloribus? Aliquam ullam
+                </p>
+                <ul>
+                  <li class="d--flex">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>1 Warrior Way, San Francisco CA 96574, USA</p>
+                  </li>
+                  <li class="d--flex">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>View Map</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="livechat">
+                <h4>Live Chat</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem labore aliquam doloribus? Aliquam ullam
+                </p>
+                <ul>
+                  <li class="d--flex">
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <p>Messenger</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter py--5">
+      <div class="container">
+        <div class="newsletter__wrapper">
+          <div class="left">
+            <ul>
+              <li><img src="./images/logo.jpg" alt="" /></li>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium nobis ipsa tempora nesciunt laudantium.
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <h3>Subscribe to our newsletter</h3>
+            <form action="">
+              <input type="text" />
+              <button class="btn bg--accent mb--2">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py--1">
+      <div class="container">
+        <div class="footer__wrapper">
+          <p>Copyright 2022 All Right Reserved</p>
+          <ul class="d--flex align--center">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-linkedin"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const links = document.querySelectorAll(".links__item h3");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          link.nextElementSibling.classList.toggle("open");
+          link.querySelector("i").classList.toggle("open");
+        });
+      });
+
+      const toggleMenu = document.querySelector(".toggle__menu");
+      const mobileNav = document.querySelector(".header__actions");
+      toggleMenu.addEventListener("click", () => {
+        toggleMenu.classList.toggle("open");
+        mobileNav.classList.toggle("open");
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script>
+      var slider = tns({
+        container: ".slider",
+        items: 2,
+        slideBy: "page",
+        autoplay: true,
+        controls: false,
+        navPosition: "bottom",
+      });
+    </script>
+
+    <script>
+      const header = document.querySelector(".header");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 150) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

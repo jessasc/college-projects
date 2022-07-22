@@ -1,0 +1,149 @@
+.about__header {
+  padding-top: 4rem;
+  h2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+  }
+  p {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.whylspu {
+  padding-bottom: 5rem;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-gap: 3rem;
+  }
+  .card {
+    text-align: center;
+  }
+  &__content {
+    padding: 4rem 2rem;
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+  .card--whylspu {
+    background-color: #0d0d64;
+  }
+}
+
+.mvp {
+  .mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+    &__content {
+      padding: 3rem;
+      color: $clr-light;
+      background-color: #52b244;
+      h1 {
+        font-size: clamp(3rem, 6vw, 6rem);
+      }
+    }
+  }
+
+  .vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+    &__content {
+      padding: 3rem;
+      color: $clr-light;
+      background-color: #61bde4;
+      text-align: right;
+      h1 {
+        font-size: clamp(3rem, 6vw, 6rem);
+      }
+    }
+  }
+
+  .quality {
+    display: grid;
+    grid-template-columns: 2fr 40rem;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+    &__content {
+      padding: 3rem;
+      color: $clr-light;
+      background-color: #612f1d;
+      h1 {
+        font-size: clamp(3rem, 6vw, 6rem);
+      }
+    }
+  }
+}
+
+.history {
+  padding: 10rem 0;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+  }
+  img {
+    @include imgFit(40rem, 40rem);
+    @include mediaQuery($break-sm) {
+      @include imgFit(30rem);
+    }
+  }
+
+  &__content {
+    small {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      color: $clr-accent;
+    }
+    h1 {
+      font-size: clamp(3rem, 6vw, 4rem);
+      margin-bottom: 1rem;
+    }
+    li {
+      text-align: justify;
+    }
+  }
+}
+
+.careers {
+  padding: 5rem 0;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-gap: 3rem;
+  }
+  &--card {
+    border-top: 6px solid $clr-accent;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    &__content {
+      padding: 2.5rem;
+      h1 {
+        text-transform: uppercase;
+        font-size: clamp(3rem, 6vw, 3.5rem);
+        margin-bottom: 6rem;
+      }
+      p {
+        text-align: justify;
+      }
+      .posted {
+        font-style: italic;
+      }
+      a {
+        color: $clr-accent;
+        font-weight: bold;
+      }
+    }
+  }
+}

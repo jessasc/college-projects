@@ -1,0 +1,22 @@
+.header {
+  padding: 1rem 0;
+  background-color: $clr-accent;
+  color: $clr-dark;
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  li {
+    margin-right: 1rem;
+  }
+  li,
+  a {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-family: $font-secondary;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+}

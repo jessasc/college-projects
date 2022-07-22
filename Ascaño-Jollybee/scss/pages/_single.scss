@@ -1,0 +1,33 @@
+.single {
+  h1 {
+    border-bottom: 1px solid $clr-dark;
+    padding: 2rem;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+  }
+  img {
+    width: 100%;
+    padding: 3rem;
+  }
+  // .details {
+  //   .option {
+
+  //   }
+  // }
+
+  .sprice {
+    padding: 2rem 0;
+    li:first-child {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 400;
+    }
+  }
+}

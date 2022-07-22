@@ -1,0 +1,81 @@
+.cart__view.show {
+    display: block;
+}
+.cart {
+    position: relative;
+    
+    &__view {
+        display: none;
+        z-index: 99999;
+        position: fixed;
+        top: 5rem;
+        right: 35rem;
+        width: 35rem;
+        min-height: 20rem;
+        background-color: #fff;
+        border: 1px solid $clr-border;
+        padding: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        img {
+            @include imgFit(10rem, 10rem);
+            margin-right: 1rem;
+        }        
+
+        h3 {
+            font-size: 1.6rem;
+            margin-top: 4rem;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 2rem;
+            color: $clr-accent;
+        }
+
+        span {
+            position: absolute;
+            top: 2rem;
+            right: 0rem;
+            background-color: $clr-accent;
+            padding: .5rem;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $clr-light;
+        }
+
+    }
+
+   
+}
+
+
+.banner {
+    background-image:   
+        linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url('https://source.unsplash.com/random/200x200');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__wrapper {
+        min-height: 40rem;
+        color: $clr-light;
+        h1 {
+            font-size: 6rem;
+        }
+
+        p   {
+            font-size: 2rem;
+        }
+    }
+}
+

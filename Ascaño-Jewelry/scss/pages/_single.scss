@@ -1,0 +1,46 @@
+.secondnav {
+  span {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  li {
+    font-family: $font-secondary;
+    font-weight: 800;
+    color: #aeaaa7;
+  }
+  li:last-child {
+    color: $clr-dark;
+  }
+}
+
+.add2cart {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+  }
+  img {
+    @include imgFit(100%, 50rem);
+    @include mediaQuery($break-md) {
+      @include imgFit(100%);
+    }
+    // @include mediaQuery(768px) {
+    //   margin-top: 5rem;
+    // }
+  }
+  &__info {
+    h1 {
+      font-family: $font-secondary;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.2;
+    }
+    li:nth-child(1) {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

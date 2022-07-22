@@ -1,0 +1,28 @@
+//HEADER
+.header {
+  padding: 1rem 0;
+  &__wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+    list-style: none;
+  }
+}
+
+li {
+  margin: 0 1rem;
+
+  a {
+    color: $clr-accent;
+    &:hover {
+      color: #a7cc1b;
+    }
+  }
+}

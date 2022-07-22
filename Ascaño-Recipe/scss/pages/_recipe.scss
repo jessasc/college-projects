@@ -1,0 +1,13 @@
+.recipe {
+  padding: 5rem 0;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    h2 {
+      font-family: $font-secondary;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+  </head>
+  <body class="">
+    <div class="todo">
+      <div class="todo__wrapper">
+        <form action="">
+          <input type="text" id="todo" placeholder="What will you do..." />
+          <input type="submit" value="Save Todo" />
+        </form>
+
+        <div class="todo__box">
+          <h2>My Todo List</h2>
+          <div class="todo__list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const submitBtn = document.querySelector("form input[type=submit]");
+      const todoList = document.querySelector(".todo__list");
+
+      submitBtn.addEventListener("click", newTodoItem);
+
+      todoList.addEventListener("click", removeTodo);
+
+      function newTodoItem(e) {
+        e.preventDefault();
+
+        const todo = document.querySelector("#todo").value;
+
+        const span = document.createElement("span");
+        span.classList = "remove__todo";
+        span.textContent = "X";
+
+        const div = document.createElement("div");
+        div.classList = "todo__item";
+        div.textContent = todo;
+
+        div.appendChild(span);
+
+        todoList.appendChild(div); //magadd ng child
+
+        this.previousElementSibling.value = "";
+      }
+
+      function removeTodo(e) {
+        if (e.target.classList.contains("remove__todo")) {
+          e.target.parentElement.remove();
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+.block__primary {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+  }
+  figure {
+    img {
+      position: relative;
+      z-index: 999;
+      @include imgFit(60rem, 40rem);
+      @include mediaQuery($break-sm) {
+        @include imgFit(100%);
+      }
+    }
+  }
+  .box {
+    position: absolute;
+    width: 65rem;
+    height: 47rem;
+    background-color: $clr-dark;
+    left: 0;
+    top: 28rem;
+    @include mediaQuery($break-sm) {
+      display: none;
+    }
+  }
+}
+
+.block__secondary {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+  }
+  figure {
+    order: 2;
+    img {
+      position: relative;
+      z-index: 999;
+      @include imgFit(60rem, 40rem);
+      @include mediaQuery($break-sm) {
+        @include imgFit(100%);
+      }
+    }
+  }
+  &__content {
+    order: 1;
+  }
+  .sbox {
+    position: absolute;
+    width: 65rem;
+    height: 47rem;
+    background-color: $clr-dark;
+    // right: -20;
+    top: -3.4rem;
+    right: -11.7rem;
+    @include mediaQuery($break-sm) {
+      display: none;
+    }
+  }
+}
+
+.calltoaction {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../images/calltoaction.jpg");
+  background-color: auto;
+  background-size: cover;
+  background-position: top;
+  &__content {
+    max-width: 55rem;
+    min-height: 45rem;
+    padding: 2rem 4rem;
+    background-color: $clr-dark;
+    color: $clr-light;
+    background: rgba(26, 26, 26, 0.8);
+  }
+}
+
+.block__primary2 {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+  }
+  figure {
+    position: relative;
+    img {
+      z-index: 99999;
+      @include imgFit(60rem, 40rem);
+      @include mediaQuery($break-sm) {
+        @include imgFit(100%);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -12rem;
+      top: 25rem;
+      width: 65rem;
+      background-color: $clr-dark;
+      height: 47rem;
+      z-index: -1;
+      top: -3.5rem;
+      @include mediaQuery($break-sm) {
+        display: none;
+      }
+    }
+  }
+}

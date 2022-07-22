@@ -1,0 +1,65 @@
+.header {
+  nav ul {
+    display: flex;
+    align-items: center;
+    li:last-child {
+      padding: 1rem;
+      border-radius: 1rem;
+      background-color: $clr-accent;
+      a {
+        color: $clr-light;
+      }
+    }
+  }
+
+  &__top {
+    li {
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+    }
+  }
+
+  nav.show {
+    right: 0;
+  }
+
+  nav {
+    @include mediaQuery($break-sm) {
+      position: fixed;
+      background-color: $clr-light;
+      top: 0;
+      right: -110%;
+      padding: 3rem;
+      width: 100vw;
+      height: 100%;
+      transition: 0.5s ease;
+      ul {
+        flex-direction: column;
+        li {
+          margin-bottom: 2rem;
+          a {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .menu {
+    &__toggle {
+      display: none;
+      @include mediaQuery($break-sm) {
+        display: block;
+        font-size: 3rem;
+      }
+    }
+    &__close {
+      display: none;
+      @include mediaQuery($break-sm) {
+        display: block;
+        text-align: right;
+        margin-right: 1rem;
+        font-size: 3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Open+Sans:wght@400;700;800&display=swap");
+
+:root {
+  --clr-text: #2c2c2c;
+  --clr-bg: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $font-size;
+  font-family: $font-primary;
+  line-height: 1.6;
+  transition: all 0.5s cubic-bezier(0.91, 0.38, 0.63, 0.78);
+  overflow-x: hidden;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+body.darkmode {
+  --clr-text: #fff;
+  --clr-bg: #2c2c2c;
+}
+
+body.nav-open {
+  transform: translateX(80%);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: clamp(2.5rem, 10vw, 20rem);
+  margin-bottom: 3rem;
+  text-align: center;
+  border-top: 1px solid $clr-border;
+  border-bottom: 1px solid $clr-border;
+}
+
+.block__header {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  padding: 2rem;
+  line-height: 1;
+}

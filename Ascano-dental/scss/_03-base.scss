@@ -1,0 +1,60 @@
+// @import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Open+Sans:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Poppins:wght@400;700;900&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $font-size;
+  font-family: $font-primary;
+  line-height: 1.6;
+  transition: all 0.5s cubic-bezier(0.91, 0.38, 0.63, 0.78);
+  overflow-x: hidden;
+}
+
+body.nav-open {
+  transform: translateX(80%);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-dark;
+}
+
+.block__header {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  position: relative;
+  margin-bottom: 3rem;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 6rem;
+    top: 110%;
+    left: 0;
+    background-color: $clr-accent;
+  }
+}
+
+.btn {
+  padding: 1rem;
+  border: none;
+  color: $clr-light;
+  border-radius: 0.5rem;
+  min-width: 15rem;
+  margin-left: auto;
+  display: inline-block;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: darken($clr-accent, 10);
+  }
+}

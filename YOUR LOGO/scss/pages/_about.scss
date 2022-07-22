@@ -1,0 +1,111 @@
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../images/banner.jpg");
+  background-color: auto;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
+.featured {
+  margin-bottom: 5rem;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-gap: 3rem;
+  }
+  &__content {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 0 0 2rem 2rem;
+  }
+}
+
+.about {
+  background-image: linear-gradient(#c0c0c0, #8b8b8b);
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 45rem 1fr;
+    grid-gap: 4rem;
+    @include mediaQuery($break-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  img {
+    @include imgFit(100%);
+  }
+  &__content {
+    h3 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      margin-bottom: 0.5rem;
+      li {
+        margin-right: 0.4rem;
+      }
+    }
+  }
+  &__button {
+    a {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.testimonial {
+  h1 {
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 4rem;
+  }
+  &__card {
+    text-align: center;
+    img {
+      @include imgFit(10rem, 10rem);
+      border-radius: 50rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+    }
+  }
+  &__content {
+    span {
+      font-weight: bold;
+    }
+    .big {
+      margin-top: 3rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.faqs {
+  h1 {
+    font-size: clamp(2rem, 6rem, 3rem);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.related {
+  h1 {
+    font-size: clamp(2rem, 6rem, 3rem);
+    margin-bottom: 3rem;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 4rem;
+  }
+  iframe {
+    border-radius: 2rem;
+  }
+}

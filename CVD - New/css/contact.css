@@ -1,0 +1,87 @@
+#contact {
+  padding-top: 15rem;
+}
+
+#contact .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+@media (max-width: 911px) {
+  #contact .container {
+    flex-direction: column;
+  }
+}
+
+#contact .container .first-half .contact-title {
+  color: #ffa700;
+  font-weight: bolder;
+  font-size: 4rem;
+  /* margin: 4rem 0; */
+  margin-bottom: 3rem;
+}
+
+/*Hinati yung first and second half into 50%*/
+#contact .container .first-half,
+#contact .container .second-half {
+  width: 50%;
+}
+
+/* table,
+th,
+td {
+  border: 1px solid red;
+} */
+
+#contact .container .first-half .contact-info i {
+  color: #ffa700;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+#contact .container .first-half .contact-info {
+  margin-top: 3rem;
+}
+
+/* SOCIAL MEDIA ICONS */
+.contact-icons {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.contact-icons i {
+  margin: 0 5px;
+}
+
+#contact .container .first-half .contact-socmed {
+  margin-left: -5px;
+  margin-top: 2rem;
+}
+
+/* input {
+  width: 100%;
+} */
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: gray;
+  font-family: Poppins;
+}
+
+#contact .container .first-half,
+#contact .container .second-half {
+  width: 50%;
+}
+
+@media (max-width: 991px) {
+  #contact .container .first-half,
+  #contact .container .second-half {
+    width: 100%;
+  }
+}

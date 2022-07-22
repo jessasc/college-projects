@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <script
+      src="https://kit.fontawesome.com/08de005425.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <object data="img/logo-svg.svg" type="" class="desktop"></object>
+          <img src="img/Brand.png" alt="" class="mobile" />
+        </div>
+        <div class="navigation">
+          <input type="checkbox" class="check" name="toggle" />
+          <div class="bg-nav"></div>
+          <label for="toggle" class="toggle-btn">
+            <span class="toggle-icon">&nbsp;</span>
+          </label>
+
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="updates.html">Updates</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section id="contact" class="bg--dark">
+        <div class="container">
+          <div class="first-half">
+            <h3 class="first-half-contact__title">Contact</h3>
+            <h4 class="color--white t-justify">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+              dicta at vero sequi iure exercitationem in harum laboriosam nam
+              inventore non.
+            </h4>
+  
+            <div class="contact-info">
+              <table class="color--white">
+                <tr>
+                  <td><i class="fa-solid fa-phone-flip"></i></td>
+                  <td>+63 912 345 6789</td>
+                </tr>
+                <tr>
+                  <td><i class="fa-solid fa-envelope"></i></td>
+                  <td>hakdog.com</td>
+                </tr>
+                <tr>
+                  <td><i class="fa-solid fa-map-pin"></i></td>
+                  <td>Baloc Road, Brgy. San Ignacio San Pablo City</td>
+                </tr>
+              </table>
+            </div>
+  
+            <div class="contact-socmed">
+              <div class="contact-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+            </div>
+          </div>
+  
+          <div class="second-half">
+          <div class="formko">
+            <form action="#">
+              <input type="text" id="contact-name" name="" value="NAME" />
+              <input
+                type="text"
+                id="contact-email"
+                name=""
+                value="EMAIL"
+              />
+              <input type="text" id="contact-name" name="" value="MESSAGE" />
+              <a href="#" class="btn">SUBMIT</a>
+            </form>
+          </div>
+        </div>     
+      </section>
+  
+      <footer class="bg--dark">
+        <div class="container">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+        
+  
+        <div class="address">Baloc Road, Brgy. San Ignacio San Pablo City</div>
+  
+        <div class="copyright">&copy; CREATIVE VISUAL DESIGN 2022</div>
+      </footer>
+  
+      <script>
+        function classToggle() {
+          var nav = document.querySelector("nav");
+          nav.classList.toggle("toggle-open");
+        }
+        document
+          .querySelector(".menu-toggle")
+          .addEventListener("click", classToggle);
+  
+        /*ANIMATION NF TOGGLE*/
+        function iconAnimate() {
+          this.classList.toggle("open");
+        }
+        document
+          .querySelector("#nav-icon3")
+          .addEventListener("click", iconAnimate);
+      </script>
+  </body>
+</html>

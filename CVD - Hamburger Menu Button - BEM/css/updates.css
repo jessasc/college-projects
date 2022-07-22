@@ -1,0 +1,101 @@
+#updates {
+  padding-top: 15rem;
+}
+
+#updates .container .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
+}
+
+@media (max-width: 991px) {
+  #updates .container .grid {
+    grid-template-columns: 100%;
+  }
+}
+
+/* #updates .container .grid .order-1 {
+  order: 1;
+}
+
+#updates .container .grid .order-2 {
+  order: 2;
+} */
+
+#updates .container .grid .order-1 .categories,
+#updates .container .grid .order-1 .recent,
+#updates .container .grid .order-1 .tags {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+}
+
+#updates .container .grid .order-1 .tags span {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+#updates .container .grid .order-1 .categories table {
+  width: 100%;
+}
+
+#updates .container .grid .order-1 .recent .recent-details {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#updates .container .grid .order-1 .recent .recent-details p strong {
+  font-weight: bold;
+}
+
+#updates .container .grid .order-1 .recent .recent-details img {
+  margin-right: 2rem;
+  width: 150px;
+}
+
+#updates .container .card-grid {
+  border-bottom: 1px solid #ffa700;
+  margin-bottom: 8rem;
+}
+
+#updates .container .card-grid .card-details {
+  background: #fff;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0 0 5rem;
+}
+
+#updates .container .card-grid .card-details .card-author {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+#updates .container .card-grid .card-details .card-author li {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+#updates .container .card-grid .card-details .card-image {
+  border-radius: 5px;
+  width: 100%;
+}
+
+#updates .container .card-grid .card-title {
+  color: #ffa700;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#updates .container .card-grid .card-text {
+  padding: 2rem 0;
+  text-align: justify;
+}
+
+/*---------------------------------------------------------------*/
+.card-grid__trends {
+  border-bottom: 1px solid #ffa700;
+  margin-bottom: 8rem;
+}

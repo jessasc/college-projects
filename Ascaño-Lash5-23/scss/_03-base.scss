@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Open+Sans:wght@400;700;800&display=swap");
+@font-face {
+  font-family: "din-regular";
+  src: url("../../font/din-regular.woff2") format("woff2"),
+    url("../../font/din-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "din-condensed";
+  src: url("../../font/din-condensed.woff2") format("woff2"),
+    url("../../font/din-condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// BASE
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "din-regular";
+  line-height: 1.4;
+  color: $clr-dark;
+  overflow: auto;
+}
+
+.block__header {
+  font-size: clamp(3rem, 6vw, 3.5rem);
+  font-family: Arial;
+  position: relative;
+  margin: 0;
+  letter-spacing: 0.8rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $clr-accent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.block__header2 {
+  font-size: clamp(3rem, 6vw, 3.5rem);
+  font-family: Arial;
+  position: relative;
+  margin: 0;
+  letter-spacing: 0.8rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $clr-accent-l;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}

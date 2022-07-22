@@ -1,0 +1,80 @@
+.block__primary {
+  &__wrapper {
+    @include grid(2, 1rem);
+    @include mediaQuery($break-md) {
+      @include grid(1, 1rem);
+    }
+  }
+
+  &__img {
+    @include mediaQuery($break-md) {
+      order: 1;
+    }
+    img {
+      @include imgFit(100%, 62.5rem);
+      @include mediaQuery($break-md) {
+        @include imgFit(100%, 32.5rem);
+      }
+    }
+  }
+  &__content {
+    @include centerAll;
+    padding: 0 14rem;
+    @include mediaQuery($break-md) {
+      order: 2;
+      padding: 4rem;
+    }
+    h2 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.2;
+    }
+    p {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+  }
+}
+
+.block__secondary {
+  &__wrapper {
+    @include grid(2, 1rem);
+    @include mediaQuery($break-md) {
+      @include grid(1, 1rem);
+    }
+  }
+  &__img {
+    @include mediaQuery($break-md) {
+      order: 1;
+    }
+    img {
+      @include imgFit(100%, 42rem);
+      @include mediaQuery($break-md) {
+        @include imgFit(100%, 32.5rem);
+      }
+    }
+  }
+  &__content {
+    @include centerAll;
+    padding: 0 14rem;
+    @include mediaQuery($break-md) {
+      order: 2;
+      padding: 4rem;
+    }
+    h3 {
+      font-size: clamp(1.8rem, 2vw, 2.5rem);
+      line-height: 1.2;
+    }
+    p {
+      font-size: clamp(1.6rem, 4vw, 1.8rem);
+    }
+    .font-bold {
+      font-weight: bold;
+    }
+  }
+}
+
+.footnote {
+  &__wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+}

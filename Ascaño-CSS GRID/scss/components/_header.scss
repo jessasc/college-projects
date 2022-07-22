@@ -1,0 +1,10 @@
+.header {
+  &__nav {
+    li {
+      margin: 0 2rem;
+    }
+    @include mediaQuery {
+      display: none;
+    }
+  }
+}

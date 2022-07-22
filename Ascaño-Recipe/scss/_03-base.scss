@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Open+Sans:wght@400;700;800&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $font-size;
+  font-family: $font-primary;
+  line-height: 1.6;
+  transition: all 0.5s cubic-bezier(0.91, 0.38, 0.63, 0.78);
+  overflow-x: hidden;
+}
+
+body.nav-open {
+  transform: translateX(80%);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-dark;
+}
+
+.title {
+  color: $clr-orange;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.5rem;
+}

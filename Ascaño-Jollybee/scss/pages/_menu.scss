@@ -1,0 +1,50 @@
+.menu {
+  padding: 5rem 0;
+  text-align: center;
+  h1 {
+    font-size: clamp(3rem, 6vw, 10rem);
+    color: $clr-accent;
+  }
+  h2 {
+    font-size: clamp(3rem, 6vw, 4rem);
+    color: $clr-accent;
+    text-align: center;
+    border-right: 0;
+  }
+  p {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-gap: 6rem;
+    margin-top: 7rem;
+  }
+  .card {
+    img {
+      padding: 3rem 0;
+    }
+    box-shadow: 0 0 15px 0px rgb(230, 230, 230);
+    // border: 1px solid red;
+    &__details {
+      background-color: $clr-accent;
+      color: $clr-light;
+      padding: 2rem;
+      .rating {
+        color: #ffef4d;
+      }
+    }
+    &__title {
+      text-align: left;
+      li:last-child {
+        width: 10rem;
+        text-align: center;
+        h3 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

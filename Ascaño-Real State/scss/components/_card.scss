@@ -1,0 +1,7 @@
+.card {
+  z-index: 9999;
+  img {
+    @include imgFit(100%, 20rem);
+    display: block;
+  }
+}

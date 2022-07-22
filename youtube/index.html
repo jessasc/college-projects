@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="youtube">
+      <div class="container">
+        <div class="youtube__grid">
+          <div class="youtube__card">
+            <div class="video__content">
+              <video class="youtube__video">
+                <source src="video.mp4" />
+              </video>
+              <span>keep hovering to play</span>
+            </div>
+            <div class="youtube__card__content">
+              <div class="youtube__card__box">
+                <div class="youtube__avatar">
+                  <img src="http://via.placeholder.com/36x36" alt="" />
+                </div>
+                <div class="youtube__body">
+                  <h2 class="title">
+                    Yui asd asdasd asdas dasda sdasGoodbye days Liveasd sad asd
+                    Hongkong
+                  </h2>
+                  <a href="#" class="creator">WaveyBuds</a>
+                  <ul class="views">
+                    <li><span>11K</span>Views</li>
+                    <li><span>1</span>day ago</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="actions">
+                <li><a href="#">Watch Later</a></li>
+                <li><a href="#">Add to Queue</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="youtube__card">
+            <div class="video__content">
+              <video class="youtube__video" muted="true">
+                <source src="video.mp4" />
+              </video>
+              <span>keep hovering to play</span>
+            </div>
+            <div class="youtube__card__content">
+              <div class="youtube__card__box">
+                <div class="youtube__avatar">
+                  <img src="http://via.placeholder.com/36x36" alt="" />
+                </div>
+                <div class="youtube__body">
+                  <h2 class="title">Yui Goodbye days Live Hongkong</h2>
+                  <a href="#" class="creator">WaveyBuds</a>
+                  <ul class="views">
+                    <li><span>11K</span>Views</li>
+                    <li><span>1</span>day ago</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="actions">
+                <li><a href="#">Watch Later</a></li>
+                <li><a href="#">Add to Queue</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // select yung video
+      const videos = document.querySelectorAll(".youtube__card video");
+
+      //i-loop
+      videos.forEach((video) => {
+        //inistay mo yung mouse sa element or vid
+        video.addEventListener("mouseover", () => {
+          video.classList.add("hovering");
+          //magshow yung keep hovering
+          video.nextElementSibling.classList.add("show");
+
+          //settime out delay 1s para maghover
+          setTimeout(() => {
+            //if may class ng hovering
+            if (video.classList.contains("hovering")) {
+              //para magzoom
+              video.parentElement.parentElement.classList.add("zoom");
+              video.play(); //para magplay yung vid
+              video.nextElementSibling.classList.remove("show"); //magremove yung keep hovet=ring once na nagplay kapag hinover
+            } else {
+              video.parentElement.parentElement.classList.remove("zoom");
+              video.currentTime = 0; //starting yung oras
+              //hindi nakaplay yung vid
+              video.load();
+            }
+          }, 1500);
+        });
+
+        //inalis ng mouse sa element
+        video.addEventListener("mouseout", () => {
+          video.classList.remove("hovering");
+          video.parentElement.parentElement.classList.remove("zoom");
+          video.currentTime = 0;
+          video.load();
+          video.nextElementSibling.classList.remove("show");
+        });
+
+        //kapag natapos yung vid while hovering
+        video.addEventListener("ended", () => {
+          video.classList.remove("hovering");
+          video.parentElement.parentElement.classList.remove("zoom");
+          video.load(); //reset ng video
+        });
+      });
+    </script>
+  </body>
+</html>

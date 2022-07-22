@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header py--2">
+      <div class="container">
+        <div class="header__wrapper d--flex align--center justify--between">
+          <div class="header__nav d--flex align--center">
+            <figure class="branding mr--2">
+              <img src="./img/history.jpg" alt="" />
+            </figure>
+
+            <nav>
+              <ul class="d--flex align--center">
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">News & Event</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="header__actions align--center">
+            <nav class="mobile__nav">
+              <ul class="d--flex align--center">
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">News & Event</a></li>
+              </ul>
+            </nav>
+
+            <ul class="mobile__actions d--flex align--center">
+              <li>
+                <a href=""
+                  ><i class="fa-solid fa-location-dot text--accent"></i>San
+                  Pablo City</a
+                >
+              </li>
+              <li><a href="#" class="btn bg--accent">Enroll now</a></li>
+            </ul>
+          </div>
+
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact__header mb--3">
+          <h1>Contact</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam,
+            exercitationem!
+          </p>
+        </div>
+        <div class="wrapper">
+          <div class="contact__info">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.8997811521745!2d121.31004231483418!3d14.083092990133693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5cdecc5ea9ef%3A0xde5d6f6c9e46d1c2!2sLaguna%20State%20Polytechnic%20University%20-%20San%20Pablo%20City!5e0!3m2!1sen!2sph!4v1657084982613!5m2!1sen!2sph"
+              width="500"
+              height="350"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="connect">
+              <div class="connect__email">
+                <p>Mail LSPU at</p>
+                <a href="#">info@lspu.edu.ph</a>
+              </div>
+
+              <div class="connect__social">
+                <p>Follow us</p>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="contact__form">
+            <form action="">
+              <input type="text" placeholder="Your Name" />
+              <input type="text" placeholder="Your Email Address" />
+              <textarea
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Your project Description"
+              ></textarea>
+              <div class="right">
+                <button class="btn bg--accent">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper py--5">
+          <ul class="social__media d--flex align--center mb--2">
+            <li>
+              <a href=""><i class="fa-brands fa-spotify"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-pinterest"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+          </ul>
+
+          <ul class="policy d--flex mb--2">
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">CA Supply Chain Act</a></li>
+            <li><a href="">Cookie Policy</a></li>
+          </ul>
+
+          <p class="text--gray">
+            ©2022 Laguna State Polytechnic University. All Right Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const links = document.querySelectorAll(".links__item h4");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          link.nextElementSibling.classList.toggle("open");
+        });
+      });
+
+      const toggleMenu = document.querySelector(".toggle__menu");
+      const mobileNav = document.querySelector(".header__actions");
+      toggleMenu.addEventListener("click", () => {
+        toggleMenu.classList.toggle("open");
+        mobileNav.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.footer {
+  .policy {
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+    li:first-child {
+      padding-left: 0;
+    }
+    li:last-child {
+      border-right: none;
+    }
+    li {
+      padding: 0 1rem;
+      border-right: 1px solid $clr-light;
+      @include mediaQuery($break-md) {
+        padding: 0.5rem 0;
+        border-right: none;
+      }
+    }
+    a {
+      color: $clr-light;
+      font-weight: bold;
+      &:hover {
+        color: $clr-gray;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    @include mediaQuery($break-md) {
+      font-size: 1.2rem;
+    }
+  }
+}

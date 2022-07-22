@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jessette V. Ascaño</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2a253e9cf6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <object data="img/logo.svg" type=""></object>
+        </div>
+
+        <div class="socmed">
+          <ul>
+            <li><a href="#">fb</a></li>
+            <li><a href="#">tw</a></li>
+            <li><a href="#">in</a></li>
+          </ul>
+        </div>
+
+        <div class="navigation">
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="menu-toggle">
+            <div id="nav-icon3">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="moreaboutme">
+      <div class="container">
+       <div class="first-half center">
+           <img src="img/me1.png" alt=""/>
+           <div class="first-box"></div>
+       </div>
+       <div class="second-half">
+           <h2 class="title">Jessette Ascaño</h2>
+           <h3>UI -UX DESIGNER</h3>
+       </div>
+    </section>
+    <script>
+      function classToggle() {
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("toggle-open");
+      }
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", classToggle);
+
+      /*ANIMATION NF TOGGLE*/
+      function iconAnimate() {
+        this.classList.toggle("open");
+      }
+      document
+        .querySelector("#nav-icon3")
+        .addEventListener("click", iconAnimate);
+    </script>
+  </body>
+</html>
